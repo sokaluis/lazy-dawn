@@ -63,16 +63,16 @@
           >
             {%- if section.settings.media_type == 'video' and section.settings.video_url != blank -%}
               <video
-                class="image-with-text__video"
+                class="lazyload image-with-text__video"
                 autoplay
                 muted
                 loop
                 playsinline
                 controls
                 preload="auto"
-                loading="lazy"
                 poster="{{ section.settings.image | image_url: width: 100 }}"
                 data-src="{{ section.settings.video_url | file_url }}"
+                loading="lazy"
                 width="100%"
                 height="100%"
               >
